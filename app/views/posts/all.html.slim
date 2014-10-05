@@ -41,6 +41,6 @@
                       .item-inner
                         .item-title-row 
                           .item-title #{p.title}
-                        .item-text #{p.body}
+                        .item-text #{p.body.gsub(/(<.*?>)/, "").gsub(/(<.*?>)/, "")}
                     .sortable-handler
           .sortable-handler
