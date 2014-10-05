@@ -21,18 +21,27 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     authenticate_user!
+    if current_user.email != "h@takahi.de"
+      redirect_to action: "all"
+    end
     @post = Post.new
   end
 
   # GET /posts/1/edit
   def edit
     authenticate_user!
+    if current_user.email != "h@takahi.de"
+      redirect_to action: "all"
+    end
   end
 
   # POST /posts
   # POST /posts.json
   def create
     authenticate_user!
+    if current_user.email != "h@takahi.de"
+      redirect_to action: "all"
+    end
     @post = Post.new(post_params)
 
     respond_to do |format|
@@ -50,6 +59,9 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     authenticate_user!
+    if current_user.email != "h@takahi.de"
+      redirect_to action: "all"
+    end
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -65,6 +77,9 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
     authenticate_user!
+    if current_user.email != "h@takahi.de"
+      redirect_to action: "all"
+    end
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url }
