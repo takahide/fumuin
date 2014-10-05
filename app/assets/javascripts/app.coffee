@@ -3,7 +3,7 @@ class Page
   setPost: (id) ->
     $("#detail#{id} .video").each ->
       videoid = $(@).attr "videoid"
-      $(@).html('<iframe width="300" height="180" src="//www.youtube.com/embed/' + videoid + '" frameborder="0" allowfullscreen></iframe>')
+      $(@).html('<iframe width="250" height="150" src="//www.youtube.com/embed/' + videoid + '" frameborder="0" allowfullscreen></iframe>')
     $("#detail#{_post}").addClass "hidden"
     _post = parseInt id
     $(".status-bar").show()
