@@ -1,0 +1,47 @@
+#post-detail.popup.popup-about
+  - for p in @posts do
+    .content-block.hidden.detail-view id="detail#{p.id}"
+      .header
+        span.name #{p.title}
+      .main
+        .score #{raw(p.body)}
+.statusbar-overlay
+.panel-overlay
+.panel.panel-left.panel-reveal
+  .content-block
+    ul#menu
+      - for p in @posts do
+        li.menu
+          a.detail.open-popup.post href="#" data-popup=".popup-about" post="#{p.id}"
+            = image_tag "post.png", class: "image", size: "20x20"
+            span.name #{truncate p.title, length: 10}
+.views
+  .view.view-main
+    .navbar#nav
+      .navbar-inner
+        .center.sliding 踏む.韻 
+        .right
+          a.link.icon-only.open-panel href="#" メニュー
+    .pages.navbar-through.toolbar-through
+      .page data-page="index"
+        .page-content#top
+          .left
+            .header
+              = image_tag "fumuin.jpg"
+          .right
+            .list-block.sortable.media-list
+              a.open-sortable href="#" data-sortable=".sortable" 最新の記事
+              ul
+                - for p in @posts do
+                  li
+                    a.item-link.item-content.post.open-popup post="#{p.id}"
+                      .item-media
+                        = image_tag "post.png", size: "80x80"
+                      .item-inner
+                        .item-title-row 
+                          .item-title #{p.title}
+                          .item-after #{p.date}
+                        .item-subtitle -- 
+                        .item-text #{p.body}
+                    .sortable-handler
+          .sortable-handler

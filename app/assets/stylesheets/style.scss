@@ -1,0 +1,194 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+  font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+}
+
+#post-detail {
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: 45px;
+  .hidden {
+    display: none;
+  }
+  .header {
+    color: #fff;
+  }
+  .main {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+    padding: 10px 10px;
+    clear: both;
+    p {
+      color: #333;
+      line-height: 130%;
+      margin: 7px 0 7px;
+      iframe {
+        margin: 10px 0 10px;
+      }
+    }
+    .image {
+      width: 50%;
+      border: solid 2px #fff;
+      float: left;
+    }
+  }
+}
+
+#nav {
+  background: rgba(0, 0, 0, .7);
+  color: #fff;
+  border-bottom: solid 1px #000;
+  .right a.link {
+    color: #fff;
+  }
+}
+
+#top {
+  background: #fff;
+  .left {
+    .header {
+      img {
+        width: 100%;
+      }
+    }
+    width: 100%;
+  }
+  .right {
+    background: #eee;
+    .title {
+      padding: 20px 10px;
+      color: #fff;
+    }
+    .player {
+      width: 33%;
+      float: left;
+      position: relative;
+      &:active {
+        opacity: .8;
+      }
+      .pic {
+        width: 100%;
+        border: 1px solid #000;
+      }
+      .transparent {
+        position: absolute;
+        background: rgba(0, 0, 0, .6);
+        top: 150px;
+        width: 100%;
+        height: 50px;
+        border: 1px solid #000;
+      }
+      .description {
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        .number {
+          color: #f00;
+          font-size: 120%;
+        }
+      }
+    }
+  }
+}
+
+#menu {
+  .menu {
+    padding: 10px;
+    border-bottom: solid 1px #333;
+    .number {
+      width: 9px;
+      height: 15px;
+      margin-left: 5px;
+      color: #f00;
+    }
+    .name {
+      margin-left: 5px;
+      color: #fff;
+    }
+    .face {
+      margin-left: 5px;
+    }
+  }
+}
+
+#details {
+  background: #000;
+  color: #fff;
+  .img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .points {
+    width: 90%;
+    margin: 10px auto;
+    background: #060;
+    td.head {
+      font-size: 80%;
+    }
+    td {
+      padding: 5px;
+      text-align: center;
+      border: solid 1px #050;
+    }
+  }
+  .score {
+    width: 90%;
+    margin: 20px auto;
+    .player {
+      .position {
+        font-size: 80%;
+      }
+      .hit1 {
+        color: #cdf;
+      }
+      .hit2, .hit3, .hit4, .hit5 {
+        color: #fbb;
+      }
+    }
+  }
+}
+
+#top {
+  .viewport {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
+  }
+
+  .item {
+    float: left;
+    width: 280px;
+    margin: 0 10px;
+  }
+
+  .item img {
+    border: solid 2px #333;
+  }
+}
+
+@media (min-width: 630px) {
+  #post-detail {
+    margin-top: -300px;
+  }
+  #top {
+    .left {
+      width: 50%;
+      float: left;
+    }
+    .right {
+      width: 50%;
+      float: left;
+      .player {
+        width: 25%;
+      }
+    }
+  }
+}
+
