@@ -1,4 +1,5 @@
 #post-detail.popup.popup-about
+  .status-bar
   - for p in @posts do
     .content-block.hidden.detail-view id="detail#{p.id}"
       .header
@@ -19,10 +20,9 @@
   .view.view-main
     .navbar#nav
       .navbar-inner
-        .center.sliding 踏む.韻 
+        .center.sliding.nav-title 踏む.韻 
         .right
           a.link.icon-only.open-panel href="#" メニュー
-    .status-bar
     .pages.navbar-through.toolbar-through
       .page data-page="index"
         .page-content#top
