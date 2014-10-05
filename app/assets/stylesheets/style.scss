@@ -164,3 +164,25 @@ body {
   }
 }
 
+.status-bar { 
+  display: none;
+  margin-top: 44px;
+  height: 3px;
+  width: 100%;
+  -webkit-animation: bar 1s ease 0.5s 1 normal; 
+}
+
+@-webkit-keyframes bar {
+  0% {
+    background: #FF00FF;
+    width: 0%;
+  }
+  50% {
+    background: #ADFF2F;
+    width: 50%;
+  }
+  100% {
+    background: #AFEEEE;
+    width: 100%;
+  }
+}

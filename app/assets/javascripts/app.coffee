@@ -3,7 +3,13 @@ class Page
   setPost: (id) ->
     $("#detail#{_post}").addClass "hidden"
     _post = parseInt id
-    $("#detail#{_post}").removeClass "hidden"
+    $(".status-bar").show()
+    setTimeout ->
+      $("#detail#{_post}").removeClass "hidden"
+    , 1000
+    setTimeout ->
+      $(".status-bar").hide()
+    , 1500
   getPost: ->
     return _post
 
