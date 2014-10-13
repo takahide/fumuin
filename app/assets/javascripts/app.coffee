@@ -16,9 +16,9 @@ class Page
 page = new Page()
 
 $ ->
-  setTimeout ->
-    myApp.popup('<div class="popup"></div>')
-  , 1000
+  #setTimeout ->
+  #  myApp.popup('<div class="popup"></div>')
+  #, 1000
 
   $("body").on "click", ".post", ->
     page.setPost $(@).attr("post")
