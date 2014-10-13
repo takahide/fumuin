@@ -35,7 +35,7 @@
               ul
                 - for p in @posts do
                   li
-                    a.item-link.item-content.post.open-popup post="#{p.id}"
+                    a.item-link.item-content.post.open-popup post="#{p.id}" id="post#{p.id}"
                       .item-media
                         = image_tag "post.png", size: "80x80"
                       .item-inner

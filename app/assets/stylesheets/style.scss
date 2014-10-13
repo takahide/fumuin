@@ -35,7 +35,7 @@ body {
 }
 
 #nav {
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, .92);
   color: #fff;
   border-bottom: solid 1px #000;
   .right a.link {
@@ -188,4 +188,10 @@ body {
     background: #AFEEEE;
     width: 100%;
   }
+}
+
+.adsbygoogle {
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }

@@ -4,6 +4,7 @@ Fumuin::Application.routes.draw do
   devise_for :users
 
   get '/', to: 'posts#all', as: 'top'
+  get '/:id', to: 'posts#all', as: 'top_with_id'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
