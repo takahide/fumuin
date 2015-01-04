@@ -3,6 +3,8 @@ Fumuin::Application.routes.draw do
 
   devise_for :users
 
+  get '/:id', to: 'book#redirect'
+
   get '/', to: 'posts#all', as: 'top'
   get '/:id', to: 'posts#all', as: 'top_with_id'
 
